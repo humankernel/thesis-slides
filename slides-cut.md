@@ -1,4 +1,23 @@
+<!-- # Homologos
 
+<span class="absolute top-10 right-15"> Elicit </span>
+
+<SlidevVideo autoplay controls class="rounded-xl">
+  <source src="./assets/elicit.mp4" type="video/mp4" />
+  <p>
+    Your browser does not support videos. You may download it
+    <a href="./assets/elicit.mp4">here</a>.
+  </p>
+</SlidevVideo> -->
+
+<!--
+1. **Elicit** es una herramienta de inteligencia artificial diseñada para ayudar en la investigación académica, está enfocado en la revisión y síntesis de literatura científica.
+
+El usuario introduce la pregunta y el sistema realiza un proceso complejo de:
+    - recoleccion de articulos relevantes.
+    - extrae la informacion relevante de cada uno.
+    - genera un articulo en forma de Survey resumiendo y citando lo encontrado.
+-->
 ---
 layout: image-right
 image: ./assets/generator.svg

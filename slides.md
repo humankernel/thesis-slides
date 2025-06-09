@@ -33,7 +33,7 @@ fonts:
 </div>
 
 <!--
-Hola mi nombre es Joaquin y ahora les presentare mi tesis titulada:
+Hola, buenos dias mi nombre es Joaquin y voy a presentar mi tesis de grado titulada:
 
 **LEER**
 -->
@@ -88,27 +88,6 @@ Desarrollar una herramienta de código abierto, basada en LLM y RAG, para el an�
 + Elaborar una propuesta de solución al problema tratado.
 + Validar que la propuesta responde a los objetivos planteados.
 
-<!-- # Homologos
-
-<span class="absolute top-10 right-15"> Elicit </span>
-
-<SlidevVideo autoplay controls class="rounded-xl">
-  <source src="./assets/elicit.mp4" type="video/mp4" />
-  <p>
-    Your browser does not support videos. You may download it
-    <a href="./assets/elicit.mp4">here</a>.
-  </p>
-</SlidevVideo> -->
-
-<!--
-1. **Elicit** es una herramienta de inteligencia artificial diseñada para ayudar en la investigación académica, está enfocado en la revisión y síntesis de literatura científica.
-
-El usuario introduce la pregunta y el sistema realiza un proceso complejo de:
-    - recoleccion de articulos relevantes.
-    - extrae la informacion relevante de cada uno.
-    - genera un articulo en forma de Survey resumiendo y citando lo encontrado.
--->
-
 ---
 
 # Sistemas Homologos
@@ -124,7 +103,7 @@ Los sistemas existentes cuentan con limitaciones que afectan su usabilidad en el
 
 3. Estan enfocadas mayormente al idioma ingles.
 
-Estas limitaciones dan paso a desarrollar una solucion que sea acorde a los problemas de Cuba.
+Estas limitaciones dan paso a desarrollar una solucion enfocada al entorno cubano.
 -->
 
 
@@ -150,15 +129,13 @@ image: './assets/chatgpt.webp'
 <!--
 Una solucion que solo haga uso de los LLM no es suficiente debido a limitaciones como:
 
-1. Nuevo conocimiento requiere un nuevo reentrenamiento del modelo.
+1. Conocimiento estatico: Actualizarlo requiere nuevos reentrenamientos.
 
-2. Las respuestas son realistas pero muchas veces erroneas.
+2. Respuestas no verificables: No se puede saber que datos de entrenamiento se utilizo para la respuesta.
 
-3. El modelo suele tener pobre rendimiento en las areas del conocimiento poco representadas en los datos de entrenamiento.
+3. Las respuestas no son objetivas y dependen de que tan bien representados esten los datos.
 
 4. Los modelos tienen un limite de palabras que pueden recibir.
-
-Estas limitaciones son fundamentales de las arquitectura actual de estos modelos por eso se necesita una forma de rodear estas limitaciones y utilizar el conocimiento base de estos modelos mientras se extiende con nueva y mas relevante informacion.
 -->
 
 
@@ -219,9 +196,24 @@ La metodología "Programación Extrema" (XP) generó los siguientes artefactos:
 
 - Estándares de Codificación
 
-  - Patrón arquitectónico.
+  - Patrón arquitectónico <span class="opacity-50"> (Arquitectura por Capas) </span>
 
   - Patrones de diseño.
+
+---
+
+# Requisitos Funcionales
+
+- Enviar consultas.
+
+- Enviar archivos PDF.
+
+- Generar respuestas.
+
+- Procesar archivos.
+
+- Buscar documentos relevantes.
+
 
 ---
 layout: image
@@ -231,22 +223,22 @@ image: ./assets/ragas.webp
 # Evaluación
 
 <!--
-A continuacion se muestran los resultados de utilizar las metricas definidas por RAGAS:
+A continuacion se muestran los resultados de utilizar las metricas definidas por RAGAS para evaluar el sistema:
 
-Los resultados obtenidos fueron los esperados y marcan el camino para enfocar futuras mejoras.
-
-EXTRA:
 - Faithfulness: respuesta generada vs informacion recuperada.
     -> La respuesta generada no se adiere en la mayoria de los casos a la informacion recuperada.
+    -> Lo cual puede deberse al modelo LLM utilizado.
 
-- Context Recall: informacion relevante recuperada / toda la informacion recuperada.
+- Context Recall: porciento de informacion relevante recuperada / toda la informacion recuperada.
     -> El prototipo en la mayoria de los casos probados recupera la informacion relevante.
 
 - Factual Correctness: respuesta generada vs la de referencia.
     -> La respuesta representa la mayoria de los hechos en la respuesta de referencia.
 
-Esto nos da a entender que si bien los documentos relevantes se encuentran en su mayoria,
-hay presencia de mucho ruido lo cual lleva a que el modelo ignore la mayoria de esta.
+Los resultados obtenidos fueron los esperados y marcan el camino para enfocar futuras mejoras.
+
+
+Esto nos da a entender que si bien los documentos relevantes se encuentran en su mayoria, hay presencia de mucho ruido lo cual lleva a que el modelo ignore la mayoria de esta.
 -->
 
 ---
