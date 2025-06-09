@@ -1,0 +1,14 @@
+{
+  "overrides": [
+    {
+      "files": ["slides.md", "pages/*.md"],
+      "options": {
+        "parser": "slidev",
+        "plugins": ["prettier-plugin-slidev"]
+      }
+    }
+  ],
+  "tabWidth": 2,
+  "semi": false,
+  "singleQuote": true
+}
