@@ -5,6 +5,8 @@
       "name": "thesis",
       "dependencies": {
         "@slidev/cli": "51.6.0",
+        "codemirror-theme-vars": "^0.1.2",
+        "prism-theme-vars": "^0.2.5",
         "vue": "3.5.13",
       },
     },
@@ -515,6 +517,8 @@
     "cliui": ["cliui@8.0.1", "", { "dependencies": { "string-width": "^4.2.0", "strip-ansi": "^6.0.1", "wrap-ansi": "^7.0.0" } }, "sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ=="],
 
     "clone-regexp": ["clone-regexp@3.0.0", "", { "dependencies": { "is-regexp": "^3.0.0" } }, "sha512-ujdnoq2Kxb8s3ItNBtnYeXdm07FcU0u8ARAT1lQ2YdMwQC+cdiXX8KoqMVuglztILivceTtp4ivqGSmEmhBUJw=="],
+
+    "codemirror-theme-vars": ["codemirror-theme-vars@0.1.2", "", {}, "sha512-WTau8X2q58b0SOAY9DO+iQVw8JKVEgyQIqArp2D732tcc+pobbMta3bnVMdQdmgwuvNrOFFr6HoxPRoQOgooFA=="],
 
     "color-convert": ["color-convert@2.0.1", "", { "dependencies": { "color-name": "~1.1.4" } }, "sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ=="],
 
@@ -1043,6 +1047,8 @@
     "postcss-selector-parser": ["postcss-selector-parser@7.1.0", "", { "dependencies": { "cssesc": "^3.0.0", "util-deprecate": "^1.0.2" } }, "sha512-8sLjZwK0R+JlxlYcTuVnyT2v+htpdrjDOKuMcOVdYjt52Lh8hWRYpxBPoKx/Zg+bcjc3wx6fmQevMmUztS/ccA=="],
 
     "pptxgenjs": ["pptxgenjs@3.12.0", "", { "dependencies": { "@types/node": "^18.7.3", "https": "^1.0.0", "image-size": "^1.0.0", "jszip": "^3.7.1" } }, "sha512-ZozkYKWb1MoPR4ucw3/aFYlHkVIJxo9czikEclcUVnS4Iw/M+r+TEwdlB3fyAWO9JY1USxJDt0Y0/r15IR/RUA=="],
+
+    "prism-theme-vars": ["prism-theme-vars@0.2.5", "", {}, "sha512-/D8gBTScYzi9afwE6v3TC1U/1YFZ6k+ly17mtVRdLpGy7E79YjJJWkXFgUDHJ2gDksV/ZnXF7ydJ4TvoDm2z/Q=="],
 
     "process-nextick-args": ["process-nextick-args@2.0.1", "", {}, "sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag=="],
 
