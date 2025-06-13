@@ -13,10 +13,10 @@ fonts:
 
 <div class="flex flex-col justify-between h-[470px]">
   <div class="text-center flex flex-col justify-center gap-4">
-    <span class=" font-bold opacity-60 text-md"> Universidadad de las Ciencias Informáticas - 2025 </span>
+    <span class=" font-bold opacity-60 text-md"> Universidad de las Ciencias Informáticas - 18/7/2025 </span>
   </div>
 
-  <div class="text-5xl font-bold text-center">Desarrollo de una herramienta basada <br> en LLM y RAG para optimizar el análisis <br> de artículos científicos.
+  <div class="text-5xl font-bold text-center">Desarrollo de una herramienta basada en LLM y RAG para asistir el análisis de artículos científicos.
   </div>
 
   <div class="flex justify-between text-sm">
@@ -33,7 +33,7 @@ fonts:
 </div>
 
 <!--
-Hola, buenos dias mi nombre es Joaquin y voy a presentar mi tesis de grado titulada:
+Buenos dias mi nombre es Joaquin Rivas Sanchez y voy a presentar mi tesis sobre el:
 
 **LEER**
 -->
@@ -310,7 +310,7 @@ image: "./assets/rag.webp"
 
 <div class="flex flex-col justify-between h-[470px]">
   <div class="text-center flex flex-col justify-center gap-4">
-    <span class=" font-bold opacity-60 text-md"> Universidadad de las Ciencias Informáticas - 2025 </span>
+    <span class=" font-bold opacity-60 text-md"> Universidad de las Ciencias Informáticas - 18/7/2025 </span>
   </div>
 
   <div class="text-5xl font-bold text-center">Desarrollo de una herramienta basada <br> en LLM y RAG para optimizar el análisis <br> de artículos científicos.

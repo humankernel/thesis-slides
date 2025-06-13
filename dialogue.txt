@@ -1,0 +1,111 @@
+Buenos dias mi nombre es Joaquin Rivas Sanchez y voy a presentar mi tesis sobre el:
+
+---
+
+En los últimos años, la IA Generativa ha experimentado un **crecimiento sin precedentes**, impulsada por avances en los modelos de aprendizaje profundo.
+
+Gracias a esto, se han abierto posibilidades para automatizar procesos que antes requerían un alto grado de intervención humana.
+
+---
+
+Esto nos lleva al siguiente problema de investigación
+
+Objeto de Estudio, Campo de Acción
+
+Objetivo General
+
+Tareas de investigación
+
+---
+
+Los sistemas existentes cuentan con limitaciones que afectan su usabilidad en el contexto nacional como:
+
+1. Se encuentran bloqueadas para Cuba.
+
+2. Cuantan con limitaciones en sus planes gratuitos y la imposiblidad de pagar planes de pago.
+
+3. Estan enfocadas mayormente al idioma ingles.
+
+Estas limitaciones dan paso a desarrollar una solucion enfocada al entorno cubano.
+
+---
+
+Una solucion que solo haga uso de los LLM no es suficiente debido a limitaciones como:
+
+1. Conocimiento estatico: Actualizarlo requiere nuevos reentrenamientos.
+
+2. Respuestas no verificables: No se puede saber que datos de entrenamiento se utilizo para la respuesta.
+
+3. Las respuestas no son objetivas y dependen de que tan bien representados esten los datos.
+
+4. Los modelos tienen un limite de palabras que pueden recibir.
+
+---
+
+El prototipo se enfoca en rodear estas limitaciones al utilizar una tecnica llamada:
+
+Generacion Aumentada por Recuperacion la cual se basa en introducir el conocimiento relevante para generar una respuesta junto con la pregunta del usuario.
+
+.
+
+El prototipo extiende esta idea haciendo uso de tecnicas mas avanzadas:
+
+- Las preguntas complejas se **descomponen** en multiples sub preguntas.
+
+- Se utiliza una busqueda la cual combina multiples metodos de recuperacion.
+
+- Los documentos recuperados son **reordenados** y filtrados.
+
+- Los pasos pueden ser repetidos si la respuesta no esta completa.
+
+---
+
+Tecnologías
+
+---
+
+Metodología de Desarrollo
+
+---
+
+Requisitos Funcionales
+
+---
+
+Evaluación
+
+---
+
+Pruebas de rendimiento
+
+---
+
+Las pruebas de unidad se encargan de validar el comportamiento correcto de
+componentes individuales de forma aislada.
+
+Estos fueron los resultados en las 2 iteraciones del desarrollo.
+
+---
+
+Conclusiones:
+
+- El uso de la metodología XP, junto con una arquitectura en capas y el empleo de tecnologías como Python, vLLM y Gradio, permitió desarrollar un sistema funcional y acorde a los objetivos del proyecto.
+
+- Las evaluaciones mostraron un rendimiento aceptable y esperado, demostrando la validez del prototipo.
+
+- El prototipo demostró viabilidad en hardware modesto, proporcionando una base sólida para futuras mejoras en generación y actualización documental continua.
+
+---
+
+Recomendaciones
+
+- **Extender las fuentes de información mediante agentes web** que se integren con plataformas de investigación y repositorios académicos locales e internacionales.
+
+- **Explorar lenguajes y técnicas de programacion de alto rendimiento** (C/C++ o Mojo) para aprovechar mejor los recursos.
+
+- Integrar un **mejor preprocesamiento de los archivos**, utilizando OCR y detección del layout y de fórmulas matemáticas.
+
+- Investigar **GraphRAG** para integrar grafos de conocimiento, para mejorar la precisión, contextualización y relevancia en la generación de respuestas.
+
+---
+
