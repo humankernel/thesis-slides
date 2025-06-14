@@ -2,92 +2,101 @@
 
 ---
 
+## 1. Introduccion
+
 - En nuestro país, la investigación enfrenta obstáculos particulares derivados de limitaciones tecnológicas y un acceso restringido a recursos digitales actualizados y accesibles.
 
-- Estas barreras dificultan el uso efectivo de herramientas avanzadas de inteligencia artificial, especialmente aquellas basadas en modelos de lenguaje de gran escala (LLM).
+- Estas barreras dificultan el uso efectivo de herramientas avanzadas de inteligencia artificial, especialmente aquellas basadas en modelos de lenguaje de gran tamaño (LLM).
 
 ---
 
-Esto nos lleva al siguiente problema de investigación
+## 2. Introduccion - Homologos
+
+Los sistemas y plataformas existentes que podrían apoyar la investigación científica presentan limitaciones específicas en el contexto cubano:
+
+- Muchos servicios están bloqueados para usuarios en Cuba.
+- Las opciones gratuitas son muy limitadas y el acceso a planes pagos es inviable por restricciones económicas.
+- Además, la mayoría de estas herramientas están diseñadas para un público anglófono, lo que reduce su usabilidad local.
+
+Estas condiciones generan una brecha tecnológica que limita la capacidad de los investigadores cubanos para acceder a información precisa y actualizada.
+
+---
+
+## 3. Problema de Investigación
+
+Esto nos lleva al siguiente problema de investigación.
+
+---
+
+## 4. Objeto de Estudio, Campo de Acción
 
 Objeto de Estudio, Campo de Acción
 
 Objetivo General
 
-Tareas de investigación
+---
+
+## 5. Tareas de investigación
 
 ---
 
-Los sistemas existentes cuentan con limitaciones que afectan su usabilidad en el contexto nacional como:
+## 6. ¿Qué es RAG y por qué es importante?
 
-1. Se encuentran bloqueadas para Cuba.
+La técnica RAG combina la generación de texto mediante LLM con un sistema de recuperación de información relevante y actualizada, que alimenta al modelo con datos específicos.
 
-2. Cuantan con limitaciones en sus planes gratuitos y la imposiblidad de pagar planes de pago.
+Esto permite superar limitaciones clásicas de los LLM, como:
 
-3. Estan enfocadas mayormente al idioma ingles.
+1. El conocimiento estático del modelo.
 
-Estas limitaciones dan paso a desarrollar una solucion enfocada al entorno cubano.
+2. La no verificabilidad de las respuestas.
 
----
+3. La dificultad para procesar grandes volúmenes de información contextual sin perder precisión.
 
-Una solucion que solo haga uso de los LLM no es suficiente debido a limitaciones como:
-
-1. Conocimiento estatico: Actualizarlo requiere nuevos reentrenamientos.
-
-2. Respuestas no verificables: No se puede saber que datos de entrenamiento se utilizo para la respuesta.
-
-3. Las respuestas no son objetivas y dependen de que tan bien representados esten los datos.
-
-4. Los modelos tienen un limite de palabras que pueden recibir.
+Con RAG, el sistema busca y utiliza documentos relevantes para fundamentar sus respuestas, mejorando la precisión, reduciendo sesgos y adaptándose al contexto particular del usuario.
 
 ---
 
-El prototipo se enfoca en rodear estas limitaciones al utilizar una tecnica llamada:
-
-Generacion Aumentada por Recuperacion la cual se basa en introducir el conocimiento relevante para generar una respuesta junto con la pregunta del usuario.
-
-.
-
-El prototipo extiende esta idea haciendo uso de tecnicas mas avanzadas:
-
-- Las preguntas complejas se **descomponen** en multiples sub preguntas.
-
-- Se utiliza una busqueda la cual combina multiples metodos de recuperacion.
-
-- Los documentos recuperados son **reordenados** y filtrados.
-
-- Los pasos pueden ser repetidos si la respuesta no esta completa.
+## 7. Propuesta de solucion
 
 ---
 
-Tecnologías
+## 8. Tecnologías
+
+Se emplearon tecnologías como Python, vLLM y Gradio para construir un prototipo funcional y adaptable.
 
 ---
 
-Metodología de Desarrollo
+## 9. Metodología de Desarrollo
+
+El proyecto siguió una metodología ágil basada en XP, la cual genero los siguientes artefactos ingenieriles.
 
 ---
 
-Requisitos Funcionales
+## 10. Resultados y evaluación
+
+- Las pruebas realizadas validaron que el prototipo cumple con los objetivos planteados:
+
+- Funciona con un rendimiento aceptable en hardware modesto.
+
+    - Con tiempos que no superan los 3.5 secs en las pruebas realizadas a la generacion de respuestas.
+
+    - 3 seg a la creacion de embeddings
 
 ---
 
-Evaluación
+## 10. Resultados y evaluación
+
+- Proporciona respuestas precisas y contextualizadas, que situan al prototipo como una base robusta para ser extendida en el futuro.
+
+- imagen ragas
 
 ---
 
-Pruebas de rendimiento
+## 11. Conclusiones:
 
----
 
-Las pruebas de unidad se encargan de validar el comportamiento correcto de
-componentes individuales de forma aislada.
+TODO: hacer en base a las tareas de investigación
 
-Estos fueron los resultados en las 2 iteraciones del desarrollo.
-
----
-
-Conclusiones:
 
 - El uso de la metodología XP, junto con una arquitectura en capas y el empleo de tecnologías como Python, vLLM y Gradio, permitió desarrollar un sistema funcional y acorde a los objetivos del proyecto.
 
@@ -97,15 +106,21 @@ Conclusiones:
 
 ---
 
-Recomendaciones
+## 12. Recomendaciones
 
-- **Extender las fuentes de información mediante agentes web** que se integren con plataformas de investigación y repositorios académicos locales e internacionales.
+- **Extender las fuentes de información mediante agentes web** que se conecten a repositorios académicos locales e internacionales.
 
-- **Explorar lenguajes y técnicas de programacion de alto rendimiento** (C/C++ o Mojo) para aprovechar mejor los recursos.
+- **Explorar lenguajes y técnicas de programación de alto rendimiento** para optimizar recursos.
 
-- Integrar un **mejor preprocesamiento de los archivos**, utilizando OCR y detección del layout y de fórmulas matemáticas.
+- Mejorar el preprocesamiento de documentos con OCR y detección de estructuras complejas como fórmulas matemáticas.
 
-- Investigar **GraphRAG** para integrar grafos de conocimiento, para mejorar la precisión, contextualización y relevancia en la generación de respuestas.
+- Investigar la incorporación de grafos de conocimiento (GraphRAG) para aumentar la precisión y contextualización.
 
 ---
+
+## 13. Agradecimientos
+
+Le agradezco a mis tutores por apoyarme con la conformacion de la tesis y revisiones y mejoras. 
+
+A mis padres por siempre apoyarme con todo lo que necesite en el camino.
 
