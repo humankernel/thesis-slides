@@ -1,10 +1,10 @@
-Buenos dias mi nombre es Joaquin Rivas Sanchez y voy a presentar mi tesis sobre el:
+- Buenos días, mi nombre es Joaquín Rivas Sánchez y hoy presentaré mi tesis titulada:
 
 ---
 
-En los últimos años, la IA Generativa ha experimentado un **crecimiento sin precedentes**, impulsada por avances en los modelos de aprendizaje profundo.
+- En nuestro país, la investigación enfrenta obstáculos particulares derivados de limitaciones tecnológicas y un acceso restringido a recursos digitales actualizados y accesibles.
 
-Gracias a esto, se han abierto posibilidades para automatizar procesos que antes requerían un alto grado de intervención humana.
+- Estas barreras dificultan el uso efectivo de herramientas avanzadas de inteligencia artificial, especialmente aquellas basadas en modelos de lenguaje de gran escala (LLM).
 
 ---
 
