@@ -1,24 +1,30 @@
-- Buenos días, mi nombre es Joaquín Rivas Sánchez y hoy presentaré mi tesis titulada:
+Buenos días, mi nombre es Joaquín Rivas Sánchez y hoy presentaré mi tesis titulada:
+
+Desarrollo de una herramienta basada en LLM y RAG para optimizar el análisis de artículos científicos
 
 ---
 
 ## 1. Introduccion
 
-- En nuestro país, la investigación enfrenta obstáculos particulares derivados de limitaciones tecnológicas y un acceso restringido a recursos digitales actualizados y accesibles.
+"En los últimos anos, la IA generativa ha revolucionado la investigación científica.
+Herramientas como ChatGPT, Elicit o Semantic Scholar permiten analizar miles de artículos en segundos,
+acelerando descubrimientos en medicina, ingeniería y otros campos.
+Según Nature, el 83% de los investigadores usan ya IA para revisiones bibliográficas...
+TODO: fix data
 
-- Estas barreras dificultan el uso efectivo de herramientas avanzadas de inteligencia artificial, especialmente aquellas basadas en modelos de lenguaje de gran tamaño (LLM).
+Sin embargo, estas herramientas presentan limitaciones prácticas para entornos
+con recursos limitados como el cubano.
 
 ---
 
 ## 2. Introduccion - Homologos
 
-Los sistemas y plataformas existentes que podrían apoyar la investigación científica presentan limitaciones específicas en el contexto cubano:
-
 - Muchos servicios están bloqueados para usuarios en Cuba.
-- Las opciones gratuitas son muy limitadas y el acceso a planes pagos es inviable por restricciones económicas.
-- Además, la mayoría de estas herramientas están diseñadas para un público anglófono, lo que reduce su usabilidad local.
+- Las opciones gratuitas son muy limitadas y el acceso a planes de pagos es inviable por restricciones económicas y politicas.
+- Además, la mayoría de estas herramientas están enfocadas para un público angloparlante, lo que reduce su accesibilidad local.
 
-Estas condiciones generan una brecha tecnológica que limita la capacidad de los investigadores cubanos para acceder a información precisa y actualizada.
+Estas limitaciones generan una brecha tecnológica que limita la capacidad de los investigadores cubanos
+para competir en igualdad de condiciones en la ciencia global.
 
 ---
 
@@ -26,59 +32,101 @@ Estas condiciones generan una brecha tecnológica que limita la capacidad de los
 
 Esto nos lleva al siguiente problema de investigación.
 
+¿Cómo desarrollar una herramienta de inteligencia artificial accesible, efectiva y localizable que permita a investigadores cubanos analizar documentos científicos de forma semiautomatizada, aprovechando los Modelos de Lenguaje de Gran Tamaño y Generación Aumentada por Recuperación, sin depender de infraestructura costosa o conexión a internet?
+
 ---
 
 ## 4. Objeto de Estudio, Campo de Acción
 
-Objeto de Estudio, Campo de Acción
+Se tiene como *objeto de estudio*: Modelos de Lenguaje de Gran Tamaño (LLM).
 
-Objetivo General
+Como *campo de acción*: Extensión de LLM basado en Generación-Aumentada por Recuperación (RAG).
+
+Se propone como *objetivo general*: Desarrollar una herramienta de código abierto, basada en LLM y RAG, para el análisis semiautomático de artículos científicos en formato `pdf`, adaptada al contexto tecnológico y lingüístico de Cuba.
 
 ---
 
 ## 5. Tareas de investigación
 
+Para dar cumplimiento al objetivo propuesto se proponen un conjunto de *tareas de investigación*:
+
++ Realizar estudio del estado del arte sobre el objeto de estudio y campo de acción.
++ Elaborar una propuesta de solución al problema tratado.
++ Validar que la propuesta responde a los objetivos planteados
+
 ---
 
 ## 6. ¿Qué es RAG y por qué es importante?
 
-La técnica RAG combina la generación de texto mediante LLM con un sistema de recuperación de información relevante y actualizada, que alimenta al modelo con datos específicos.
+"¿Qué es RAG y por qué revoluciona el análisis científico?
 
-Esto permite superar limitaciones clásicas de los LLM, como:
+RAG (Retrieval-Augmented Generation) es una técnica que combina lo mejor de dos mundos:
+1️⃣ La capacidad generativa de los LLMs para entender y sintetizar información.
+2️⃣ Un sistema de recuperación que busca datos actualizados y relevantes en tiempo real.
 
-1. El conocimiento estático del modelo.
+Esto resuelve tres problemas clave de los LLMs tradicionales:
 
-2. La no verificabilidad de las respuestas.
+✖ Conocimiento congelado: Los modelos base solo saben lo que aprendieron en su entrenamiento.
+✔ Con RAG: Siempre accede a la información más reciente.
 
-3. La dificultad para procesar grandes volúmenes de información contextual sin perder precisión.
+✖ Respuestas no verificables: Como 'cajas negras' que no muestran sus fuentes.
+✔ Con RAG: Mas control de la informacion y posibilidad de filtrala y citarla.
 
-Con RAG, el sistema busca y utiliza documentos relevantes para fundamentar sus respuestas, mejorando la precisión, reduciendo sesgos y adaptándose al contexto particular del usuario.
+✖ Pérdida de contexto: Los LLMs comunes olvidan detalles cuando procesan mucho texto.
+✔ Con RAG: Mejora la consistencia en el análisis de múltiples documentos al enfocarse en los fragmentos más relevantes para cada consulta.
+
+En nuestra herramienta, este enfoque permite al usuario:
+
+- Integrar conocimiento nuevo proveniente de documentos externos al sistema.
 
 ---
 
 ## 7. Propuesta de solucion
 
+El prototipo realizado consiste del siguiente flujo:
+
+El usuario puede iniciar una conversacion e introducir un documento en formato pdf
+El sistema procesara este
+    - dividiento el contenido en parrafos.
+    - estos son transformados del lenguaje natural a una representacion numerica que
+        mantiene el significado semantico de este.
+    - estos son guardados en una base de datos.
+
+Posteriormente, el usuario al introducir una consulta
+El sistema:
+    - convierte esta a la misma representacion numerica.
+    - realiza una busqueda utilizando multiples metodos de recuperacion
+        para obtener los documentos mas relevantes a la consulta.
+    - los documentos son reordenados basados en la relevancia.
+    - luego estos sirven de contexto para responder la consulta utilizando el LLM.
+
 ---
 
 ## 8. Tecnologías
 
-Se emplearon tecnologías como Python, vLLM y Gradio para construir un prototipo funcional y adaptable.
+Se utilizo:
+
+- Python como lenguaje de programación.
+- vLLM como biblioteca para ejecutar los modelos de IA.
+- Gradio como biblioteca para construir una interfaz grafica simple.
+- El modelo LLM `Qwen3-4B` y `BGE-M3` como modelo de generacion de embeddings.
+    `BGM-M3-reranker` como modelo reranker.
 
 ---
 
 ## 9. Metodología de Desarrollo
 
-El proyecto siguió una metodología ágil basada en XP, la cual genero los siguientes artefactos ingenieriles.
+El proyecto siguió la metodología ágil XP, la cual genero los siguientes artefactos ingenieriles.
 
 ---
 
 ## 10. Resultados y evaluación
 
-- Las pruebas realizadas validaron que el prototipo cumple con los objetivos planteados:
+Las pruebas realizadas validaron que el prototipo cumple con los objetivos planteados:
 
 - Funciona con un rendimiento aceptable en hardware modesto.
 
-    - Con tiempos que no superan los 3.5 secs en las pruebas realizadas a la generacion de respuestas.
+    - Con tiempos que no superan los 3.5 seg en las pruebas realizadas a la generacion de respuestas.
 
     - 3 seg a la creacion de embeddings
 
@@ -88,14 +136,14 @@ El proyecto siguió una metodología ágil basada en XP, la cual genero los sigu
 
 - Proporciona respuestas precisas y contextualizadas, que situan al prototipo como una base robusta para ser extendida en el futuro.
 
-- imagen ragas
+imagen ragas
 
 ---
 
 ## 11. Conclusiones:
 
 
-TODO: hacer en base a las tareas de investigación
+TODO: hacer en base a las tareas de investigación.
 
 
 - El uso de la metodología XP, junto con una arquitectura en capas y el empleo de tecnologías como Python, vLLM y Gradio, permitió desarrollar un sistema funcional y acorde a los objetivos del proyecto.
@@ -120,7 +168,8 @@ TODO: hacer en base a las tareas de investigación
 
 ## 13. Agradecimientos
 
-Le agradezco a mis tutores por apoyarme con la conformacion de la tesis y revisiones y mejoras. 
+Le agradezco a mis tutores por apoyarme con la conformacion de la tesis y las revisiones de la misma.
 
 A mis padres por siempre apoyarme con todo lo que necesite en el camino.
+
 
