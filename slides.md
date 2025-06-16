@@ -1,7 +1,7 @@
 ---
 theme: ./theme
 title: Thesis
-titleTemplate: '%s - Slides'
+titleTemplate: "%s - Slides"
 author: Joaquin
 transition: slide-left
 mdc: true
@@ -33,20 +33,38 @@ fonts:
 </div>
 
 <!--
-Buenos dias mi nombre es Joaquin Rivas Sanchez y voy a presentar mi tesis sobre el:
+Buenos días, mi nombre es Joaquín Rivas Sánchez y hoy presentaré mi tesis titulada:
 
 **LEER**
 -->
 
 ---
 layout: image
-image: './assets/ai.webp'
+image: "./assets/ai.webp"
 ---
 
 <!--
-En los últimos años, la IA Generativa ha experimentado un **crecimiento sin precedentes**, impulsada por avances en los modelos de aprendizaje profundo.
+"En los últimos anos, la IA generativa ha revolucionado la investigación científica.
+Herramientas como ChatGPT, Elicit o Semantic Scholar permiten analizar miles de artículos en segundos, acelerando descubrimientos en medicina, ingeniería y otros campos.
 
-Gracias a esto, se han abierto posibilidades para automatizar procesos que antes requerían un alto grado de intervención humana.
+-TODO: Según Nature, el 83% de los investigadores usan ya IA para revisiones bibliográficas...
+
+Sin embargo, estas herramientas presentan limitaciones prácticas para entornos con recursos limitados como el cubano.
+-->
+
+---
+layout: image
+image: ./assets/homologos.webp
+---
+
+# Sistemas Homologos
+
+<!--
+- Muchos servicios están bloqueados para usuarios en Cuba.
+- Las opciones gratuitas son muy limitadas y el acceso a planes de pagos es inviable por restricciones económicas y politicas.
+- Además, la mayoría de estas herramientas están enfocadas para un público angloparlante, lo que reduce su accesibilidad local.
+
+Estas limitaciones generan una brecha tecnológica que limita la capacidad de los investigadores cubanos para competir en igualdad de condiciones en la ciencia global.
 -->
 
 ---
@@ -88,96 +106,129 @@ Desarrollar una herramienta de código abierto, basada en LLM y RAG, para el an�
 + Elaborar una propuesta de solución al problema tratado.
 + Validar que la propuesta responde a los objetivos planteados.
 
----
-
-# Sistemas Homologos
-
-<img src="./assets/homologos.webp" class="w-[85%] mx-auto" />
-
-<!--
-Los sistemas existentes cuentan con limitaciones que afectan su usabilidad en el contexto nacional como:
-
-1. Se encuentran bloqueadas para Cuba.
-
-2. Cuantan con limitaciones en sus planes gratuitos y la imposiblidad de pagar planes de pago.
-
-3. Estan enfocadas mayormente al idioma ingles.
-
-Estas limitaciones dan paso a desarrollar una solucion enfocada al entorno cubano.
+<!-- 
+Para dar cumplimiento al objetivo propuesto se proponen un conjunto de *tareas de investigación*:
 -->
 
-
 ---
-layout: image-right
-image: './assets/chatgpt.webp'
+layout: image
+image: "./assets/chatgpt.webp"
 ---
 
-# Limitaciones de los LLM
+## ¿Qué es RAG y por qué es importante?
+
+<br>
 
 <v-clicks>
 
-- Conocimiento estático.
+<a>Limitaciones de los LLM</a> \
+✖ **Conocimiento congelado**
 
-- Respuestas no verificables.
+✖ **Respuestas no verificables**
 
-- Sesgo en las respuestas.
-
-- Límite en la longitud de la información que pueden recibir.
+✖ **Pérdida de contexto**
 
 </v-clicks>
 
 <!--
-Una solucion que solo haga uso de los LLM no es suficiente debido a limitaciones como:
+RAG (Retrieval-Augmented Generation) es una técnica que combina lo mejor de dos mundos:
+1️⃣ La capacidad generativa de los LLMs para entender y sintetizar información.
+2️⃣ Un sistema de recuperación que busca datos actualizados y relevantes en tiempo real.
 
-1. Conocimiento estatico: Actualizarlo requiere nuevos reentrenamientos.
+Esto resuelve tres problemas clave de los LLMs tradicionales:
 
-2. Respuestas no verificables: No se puede saber que datos de entrenamiento se utilizo para la respuesta.
+✖ **Conocimiento congelado**: Los modelos base solo saben lo que aprendieron en su entrenamiento.
+✔ **Con RAG**: Siempre accede a la información más reciente.
 
-3. Las respuestas no son objetivas y dependen de que tan bien representados esten los datos.
+✖ **Respuestas no verificables**: Como 'cajas negras' que no muestran sus fuentes.
+✔ **Con RAG**: Mayor control de la informacion y posibilidad de filtrala y citarla.
 
-4. Los modelos tienen un limite de palabras que pueden recibir.
+✖ **Pérdida de contexto**: Los LLMs comunes olvidan detalles cuando procesan mucho texto.
+✔ **Con RAG**: Mejora la consistencia en el análisis de múltiples documentos al enfocarse en los fragmentos más relevantes para cada consulta.
+
+
+
+En nuestra herramienta, este enfoque permite al usuario: Integrar conocimiento nuevo proveniente de documentos externos al sistema.
 -->
 
 
 ---
-layout: image
-image: "./assets/proto.webp"
+layout: two-cols
 ---
+
+<template v-slot:default>
 
 ## Propuesta de solución
 
+<SlidevVideo autoplay>
+  <source src="./assets/video-send-pdf.mp4" type="video/mp4"  />
+</SlidevVideo>
+
+</template>
+
+<template v-slot:right>
+
+<img src="./assets/step-indexing.webp" />
+
+</template>
+
 <!--
-El prototipo se enfoca en rodear estas limitaciones al utilizar una tecnica llamada:
+El prototipo realizado consiste del siguiente flujo:
 
-Generacion Aumentada por Recuperacion la cual se basa en introducir el conocimiento relevante para generar una respuesta junto con la pregunta del usuario.
+El usuario puede iniciar una conversacion e introducir un documento en formato pdf
+El sistema procesara este
+    - dividiento el contenido en parrafos.
+    - estos son transformados del lenguaje natural a una representacion numerica que
+        mantiene el significado semantico de este.
+    - estos son guardados en una base de datos.
+-->
 
-.
+---
+layout: two-cols
+---
 
-El prototipo extiende esta idea haciendo uso de tecnicas mas avanzadas:
+<template v-slot:default>
 
-- Las preguntas complejas se **descomponen** en multiples sub preguntas.
+## Propuesta de solución
 
-- Se utiliza una busqueda la cual combina multiples metodos de recuperacion.
+<SlidevVideo autoplay class="h-full">
+  <source src="./assets/video-query.mp4" type="video/mp4"  />
+</SlidevVideo>
 
-- Los documentos recuperados son **reordenados** y filtrados.
+</template>
 
-- Los pasos pueden ser repetidos si la respuesta no esta completa.
+<template v-slot:right>
+
+<img src="./assets/step-querying.webp" />
+
+</template>
+<!--
+Posteriormente, el usuario al introducir una consulta
+El sistema:
+    - convierte esta a la misma representacion numerica.
+    - realiza una busqueda utilizando multiples metodos de recuperacion
+        para obtener los documentos mas relevantes a la consulta.
+    - los documentos son reordenados basados en la relevancia.
+    - luego estos sirven de contexto para responder la consulta utilizando el LLM.
 -->
 
 ---
 layout: image
 image: "./assets/tech.webp"
 ---
-## Tecnologías
+# Tecnologías
 
 <!--
-- Python como lenguaje de desarrollo.
+Se utilizo:
 
-- vLLM como la biblioteca que permite la ejecucion de modelos LLM.
+- Python como lenguaje de programación.
 
-- PyTorch y NumPy para algunos algoritmos como el modulo de comparacion.
+- vLLM como biblioteca para ejecutar los modelos de IA.
 
-- Gradio para generar una interfaz de grafica sencilla para interactual con el sistema.
+- Gradio como biblioteca para construir una interfaz grafica simple.
+
+- El modelo LLM `Qwen3-4B` y `BGE-M3` como modelo de generacion de embeddings.
+    `BGM-M3-reranker` como modelo reranker.
 -->
 
 ---
@@ -200,29 +251,40 @@ La metodología "Programación Extrema" (XP) generó los siguientes artefactos:
 
   - Patrones de diseño.
 
+<!-- 
+El proyecto siguió la metodología ágil XP, la cual genero los siguientes artefactos ingenieriles.
+ -->
+
+
+---
+layout: image
+image: "./assets/performance.webp"
 ---
 
-# Requisitos Funcionales
+## Resultados y evaluación
 
-- Enviar consultas.
+<!--
+- Funciona con un rendimiento aceptable en hardware modesto.
 
-- Enviar archivos PDF.
+  - Con tiempos que no superan los 3.5 seg en las pruebas realizadas a la generacion de respuestas.
 
-- Generar respuestas.
-
-- Procesar archivos.
-
-- Buscar documentos relevantes.
-
+  - 3 seg a la creacion de embeddings
+-->
 
 ---
 layout: image
 image: ./assets/ragas.webp
 ---
 
-# Evaluación
+## Resultados y evaluación
 
 <!--
+Las pruebas realizadas validaron que el prototipo cumple con los objetivos planteados:
+
+- Proporciona respuestas precisas y contextualizadas, que situan al prototipo como una base robusta para ser extendida en el futuro.
+
+
+
 A continuacion se muestran los resultados de utilizar las metricas definidas por RAGAS para evaluar el sistema:
 
 - Faithfulness: respuesta generada vs informacion recuperada.
@@ -241,30 +303,13 @@ Los resultados obtenidos fueron los esperados y marcan el camino para enfocar fu
 Esto nos da a entender que si bien los documentos relevantes se encuentran en su mayoria, hay presencia de mucho ruido lo cual lleva a que el modelo ignore la mayoria de esta.
 -->
 
----
-layout: image
-image: "./assets/performance.webp"
----
-
-# Pruebas de rendimiento
-
-<!--
-Las pruebas de rendimiento son esenciales porque ayudan a tomar decisiones informadas sobre
-optimización, escalabilidad y viabilidad del sistema en distintos entornos de implementación.
-
-Las pruebas fueron ejecutados en un Hardware modesto y muestran resultados prometedores.
-
-1. La generacion de respuestas se mantiene debajo de los 3.5 segundos.
-
-2. La creacion de embeddings esta dentro de los 3 segundos para procesar hasta 1000 oraciones.
--->
 
 ---
 layout: image
 image: ./assets/unit-test-results.webp
 ---
 
-# Pruebas de Unidad
+## Pruebas de Unidad
 
 <!--
 Las pruebas de unidad se encargan de validar el comportamiento correcto de
@@ -287,24 +332,26 @@ Estos fueron los resultados en las 2 iteraciones del desarrollo.
 
 # Recomendaciones
 
-- **Extender las fuentes de información mediante agentes web** que se integren con plataformas de investigación y repositorios académicos locales e internacionales.
+- **Extender las fuentes de información mediante agentes web** que se conecten a repositorios académicos locales e internacionales.
 
-- **Explorar lenguajes y técnicas de programacion de alto rendimiento** (C/C++ o Mojo) para aprovechar mejor los recursos.
+- **Explorar lenguajes y técnicas de programación de alto rendimiento** para optimizar recursos.
 
-- Integrar un **mejor preprocesamiento de los archivos**, utilizando OCR y detección del layout y de fórmulas matemáticas.
+- **Mejorar el preprocesamiento** de documentos con OCR y detección de estructuras complejas como fórmulas matemáticas.
 
-- Investigar **GraphRAG** para integrar grafos de conocimiento, para mejorar la precisión, contextualización y relevancia en la generación de respuestas.
+- Investigar la incorporación de grafos de conocimiento (**GraphRAG**) para aumentar la precisión y contextualización.
 
-<!--
-- Evaluar **arquitecturas distribuidas**, desplegando modelos ligeros y especializados en nodos heterogéneos para mejorar escalabilidad.
 
-- Combinar fine-tuning con RAG para aumentar la fidelidad de las respuestas ajustando modelos a dominios concretos.
+---
+layout: section
+---
+
+# Agradecimientos ...
+
+<!-- 
+Le agradezco a mis tutores por apoyarme con la conformacion de la tesis y las revisiones de la misma.
+
+A mis padres por siempre apoyarme con todo lo que necesite en el camino.
 -->
-
----
-layout: image
-image: "./assets/rag.webp"
----
 
 ---
 
@@ -328,12 +375,3 @@ image: "./assets/rag.webp"
     </span>
   </div>
 </div>
-
----
-
-# Preguntas
-
----
-
-# Agradecimientos
-

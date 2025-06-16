@@ -58,8 +58,6 @@ Para dar cumplimiento al objetivo propuesto se proponen un conjunto de *tareas d
 
 ## 6. ¿Qué es RAG y por qué es importante?
 
-"¿Qué es RAG y por qué revoluciona el análisis científico?
-
 RAG (Retrieval-Augmented Generation) es una técnica que combina lo mejor de dos mundos:
 1️⃣ La capacidad generativa de los LLMs para entender y sintetizar información.
 2️⃣ Un sistema de recuperación que busca datos actualizados y relevantes en tiempo real.
