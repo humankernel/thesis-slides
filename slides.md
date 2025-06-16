@@ -98,13 +98,14 @@ Extensión de LLM basado en RAG.
 
 Desarrollar una herramienta de código abierto, basada en LLM y RAG, para el análisis semiautomático de artículos científicos en PDF, adaptada al contexto tecnológico y lingüístico de Cuba.
 
-<br>
+---
 
 # Tareas de investigación
 
-+ Realizar estudio del estado del arte sobre el objeto de estudio y campo de acción.
-+ Elaborar una propuesta de solución al problema tratado.
-+ Validar que la propuesta responde a los objetivos planteados.
++ Elaboración del marco teórico referente a modelos del lenguaje de gran tamaño y la extension utilizando generación aumentada por recuperación.
++ Análisis de sistemas homólogos para la identificación de los requisitos de software.
++ Implementación del sistema a partir de los requisitos de software.
++ Validación de la propuesta de solución.
 
 <!-- 
 Para dar cumplimiento al objetivo propuesto se proponen un conjunto de *tareas de investigación*:
@@ -322,9 +323,13 @@ Estos fueron los resultados en las 2 iteraciones del desarrollo.
 
 # Conclusiones
 
-- El uso de la metodología XP, junto con una arquitectura en capas y el empleo de tecnologías como Python, vLLM y Gradio, permitió desarrollar un sistema funcional y acorde a los objetivos del proyecto.
+Con el desarrollo de la herramienta se puede afirmar que:
 
-- Las evaluaciones mostraron un rendimiento aceptable y esperado, demostrando la validez del prototipo.
+- Se logró una revisión integral de los Modelos de Lenguaje de Gran Tamaño (LLM) y su extensión mediante Generación Aumentada por Recuperación (RAG), lo cual permitió sustentar conceptualmente el diseño de la herramienta propuesta.
+
+- En el análisis de sistemas homólogos, se identificaron limitaciones clave de soluciones existentes, lo que orientó de forma efectiva la definición de los requisitos funcionales y no funcionales del sistema.
+
+- La metodología XP facilitó el desarrollo incremental, resultando en un prototipo funcional acorde al objetivo general planteado.
 
 - El prototipo demostró viabilidad en hardware modesto, proporcionando una base sólida para futuras mejoras en generación y actualización documental continua.
 
