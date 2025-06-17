@@ -103,6 +103,10 @@ Extensión de LLM basado en RAG.
 
 Desarrollar una herramienta de código abierto, basada en LLM y RAG, para el análisis semiautomático de artículos científicos en PDF, adaptada al contexto tecnológico y lingüístico de Cuba.
 
+<!-- 
+Se propone como Objetivo General 
+-->
+
 ---
 
 # Tareas de investigación
@@ -128,7 +132,7 @@ Primero es importante entender que es RAG:
 
 Generación Aumentada por Recuperación (RAG) es una técnica que combina lo mejor de dos mundos:
 
-1. La habilidad de buscar y recuperar información específica y actualizada de fuentes externas, como bases de datos, documentos o repositorios de datos.
+1. La habilidad de **buscar y recuperar información específica** y actualizada de fuentes externas, como bases de datos, documentos o repositorios de datos.
 2. La capacidad generativa de los LLM para sintetizar información.
 -->
 
@@ -145,12 +149,16 @@ Generación Aumentada por Recuperación (RAG) es una técnica que combina lo mej
 <!--
 Esto resuelve tres limitaciones clave de los LLM tradicionales:
 
-- Con los LLM el conocimiento es estático, limitado a los datos con los que fue entrenado.
+- Los LLM por sí solos tienen un conocimiento estático, limitado a los datos con los que fueron entrenados, sin acceso a información posterior a ese entrenamiento.
+
+- La ventana de contexto limitada dificulta el manejo de textos largos o complejos, lo que puede afectar la coherencia y precisión de las respuestas.
+
+- La verificación y control de la información generada es limitada, lo que puede provocar respuestas incorrectas o "alucinaciones"
 
 
-En el prototipo desarrollado, este enfoque permite al usuario: 
+En el prototipo, **este enfoque permite** al usuario: 
 
-Integrar conocimiento nuevo proveniente de documentos externos al sistema.
+- Integrar conocimiento nuevo proveniente de documentos externos al sistema.
 -->
 
 ---
@@ -204,7 +212,7 @@ layout: two-cols
 Posteriormente, al usuario introducir una consulta
 
 1. El sistema puede descomponer la misma en múltiples sub-preguntas.
-2. Luego son convertidas a la misma representación numérica (utilizando un modelo especializado).
+2. Luego son convertidas a la misma representación numérica.
 3. Posteriormente se realiza una búsqueda utilizando múltiples métodos de recuperación para obtener los documentos mas relevantes a la consulta.
 4. los mismos son reordenados basados en la relevancia.
 5. luego estos sirven de contexto para responder la pregunta utilizando el LLM.
@@ -253,9 +261,9 @@ La metodología "Programación Extrema" (XP) generó los siguientes artefactos:
   - Patrones de diseño.
 
 <!-- 
-El proyecto siguió la metodología ágil XP, idea debido a:
+El proyecto siguió la metodología ágil Programación Extrema (XP), gracias a:
 
-Su enfoque en ciclos iterativos cortos y pruebas constantes ayuda a garantizar que cada avance sea funcional y alineado con los objetivos del proyecto, optimizando el uso del tiempo y asegurando mejoras continuas sin desviaciones significativas.
+Su enfoque en **ciclos iterativos cortos** y **pruebas constantes** ayuda a garantizar que cada avance sea funcional y **alineado con los objetivos del proyecto**.
 
 Esta genero los siguientes artefactos ingenieriles.
  -->
@@ -306,13 +314,13 @@ image: ./assets/ragas.webp
 ## Resultados y evaluación
 
 <!--
-Para las evaluaciones se utilizaron las metricas definidas por RAGAS las cuales son:
+Para las evaluaciones se utilizaron las métricas definidas por RAGAS:
 
 Los resultados obtenidos fueron **LEER**, valores que se alinean con lo esperado. 
 
 El rendimiento en Faithfulness y Factual Correctness está condicionado por el tamaño reducido del modelo LLM utilizado. 
 
-Dado que la investigación se enfoca en el uso de LLM y RAG en entornos con recursos limitados, estos resultados reflejan un balance adecuado entre precisión y eficiencia, proporcionando una base sólida para futuras mejoras.
+Dado que la **investigación se enfoca** en el uso de LLM y RAG en entornos con recursos limitados, estos resultados reflejan un **balance adecuado entre precisión y eficiencia**, proporcionando una base sólida para futuras mejoras.
 -->
 
 ---
@@ -321,8 +329,6 @@ image: ./assets/rag.webp
 ---
 
 <!-- 
-En pantalla se puede ver la aplicacion 
-
 En pantalla se puede ver el prototipo generado. 
 
 A la izquierda, se encuentran los ajustes avanzados
@@ -338,7 +344,7 @@ A la derecha, se visualizan los documentos o fragmentos relevantes recuperados, 
 
 # Conclusiones
 
-- Se logró una revisión integral de los LLM y su extensión mediante RAG, lo cual permitió sustentar conceptualmente el diseño de la herramienta propuesta.
+- Se logró una revisión integral de los LLM y su extensión mediante RAG, lo cual permitió sustentar conceptualmente la herramienta propuesta.
 
 - La metodología XP facilitó el desarrollo incremental, resultando en un prototipo funcional acorde al objetivo general planteado.
 
@@ -399,7 +405,7 @@ Las prácticas adoptadas que permitieron iterar rápidamente y mejorar el códig
 
 <v-clicks>
 
-- ✅ Diseño simple
+- ✅ Mantener un diseño simple
 
 - ✅ Refactorización constante
 
@@ -413,8 +419,6 @@ Las prácticas que se omitieron fueron:
 
 <!-- 
 - Mantener el diseño del sistema lo más simple posible, implementando solo lo necesario para cumplir los requisitos actuales.
-
-- Se desarrollaron pruebas para garantizar que software cumple con los requisitos y que los cambios no introducen errores.
 
 - Se realizo refactorizacion constante para mejorar continuamente el código sin cambiar su funcionalidad, para mantenerlo limpio y fácil de entender.
 
@@ -435,7 +439,7 @@ image: ./assets/kanban.webp
 # Respuesta
 
 <!-- 
-Para futuros proyectos individuales, recomendaria una metodologia hibrida que combine las prácticas utilizados de XP, junto con la metodologia Kanban 
+Para futuros proyectos individuales, recomendaria una metodologia hibrida que **combine las prácticas** utilizados de XP, junto con la metodologia Kanban 
 
 la cual utiliza un tablero visual para **gestionar el flujo de trabajo** y **limitar el trabajo en curso**. 
 
