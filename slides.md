@@ -117,6 +117,9 @@ Para dar cumplimiento al objetivo propuesto se proponen un conjunto de *tareas d
 -->
 
 ---
+layout: image 
+image: ./assets/ragg.webp
+---
 
 # ¿Qué es RAG y por qué es importante?
 
