@@ -33,11 +33,11 @@ fonts:
 </div>
 
 <!--
-Buenos días, en el dia de hoy se le dara presentacion al trabajo de diploma titulado:
+Buenos días, en el dia de hoy se le dara presentación al trabajo de diploma titulado:
 
 **LEER TITULO**
 
-El autor es quien les habla y los tutores.
+El autor es quien les habla y como tutores.
 
 **LEER TUTORES**
 -->
@@ -123,7 +123,7 @@ Para dar cumplimiento al objetivo propuesto se proponen un conjunto de *tareas d
 <!--
 Primero es importante entender que es RAG:
 
-Generacion Aumentada por Recuperacion (RAG) es una técnica que combina lo mejor de dos mundos:
+Generación Aumentada por Recuperación (RAG) es una técnica que combina lo mejor de dos mundos:
 
 1. La habilidad de buscar y recuperar información específica y actualizada de fuentes externas, como bases de datos, documentos o repositorios de datos.
 2. La capacidad generativa de los LLM para sintetizar información.
@@ -137,18 +137,13 @@ Generacion Aumentada por Recuperacion (RAG) es una técnica que combina lo mejor
 |-----------|-----------|-----------|
 | **Acceso a la información** | ❌ Conocimiento estático. | ✅ Acceso a información actualizada y en tiempo real. |
 | **Verificación de respuestas**| ❌ Respuestas no verificables | ✅ Control y filtrado de la información  |
-| **Manejo del contexto** | ❌ Pérdida o limitación del contexto. | ✅ Enfoque en fragmentos relevantes para cada consulta. |
+| **Manejo del contexto** | ❌ Bajo rendimiento en textos extensos. | ✅ El contexto contiene unicamente los fragmentos relevantes para cada consulta. |
 
 <!--
 Esto resuelve tres limitaciones clave de los LLM tradicionales:
 
 - Con los LLM el conocimiento es estático, limitado a los datos con los que fue entrenado.
-- El enfoque RAG permite ...
-- ... 
-- con RAG se tiene un mayor control y filtrado sobre la información que se utiliza para generar la respuesta.
 
-- los LLM a menudo tienen un pobre rendimiento cuando el texto de entrada es demasiado grande.
-- RAG permite utilizar solo la información relevante para responder la pregunta. 
 
 En el prototipo desarrollado, este enfoque permite al usuario: 
 
@@ -255,9 +250,33 @@ La metodología "Programación Extrema" (XP) generó los siguientes artefactos:
   - Patrones de diseño.
 
 <!-- 
-El proyecto siguió la metodología ágil XP, la cual genero los siguientes artefactos ingenieriles.
+El proyecto siguió la metodología ágil XP, idea debido a:
+
+Su enfoque en ciclos iterativos cortos y pruebas constantes ayuda a garantizar que cada avance sea funcional y alineado con los objetivos del proyecto, optimizando el uso del tiempo y asegurando mejoras continuas sin desviaciones significativas.
+
+Esta genero los siguientes artefactos ingenieriles.
  -->
 
+---
+
+# Requisitos funcionales
+
+- **HU1: Enviar consultas**
+- **HU2: Enviar archivos PDF**
+- **HU3: Generar respuestas**
+- **HU4: Procesar archivos**
+- **HU5: Buscar documentos relevantes**
+- **HU6: Mostrar documentos recuperados y sus puntuaciones**
+- HU7: Regenerar respuesta
+- HU8: Dar retroalimentación de una respuesta
+- HU9: Editar una consulta previa
+- HU10: Ajustar los parámetros del sistema
+- HU11: Crear múltiples conversaciones
+- HU12: Limpiar el chat
+
+<!-- 
+Entre los requisitos funcionales principales se encuentran:
+ -->
 
 ---
 layout: image
@@ -413,7 +432,11 @@ image: ./assets/kanban.webp
 # Respuesta
 
 <!-- 
-Para futuros proyectos individuales, recomendaria una metodologia hibrida que combine las practicas utilizados en este desarrollo anteriormente mencionados de XP, junto con la metodologia Kanban la cual utiliza un tablero visual para **gestionar el flujo de trabajo** y **limitar el trabajo en curso**. Esto permite visualizar claramente el estado de cada tarea y detectar cuellos de botella, mejorando la eficiencia y la productividad.
+Para futuros proyectos individuales, recomendaria una metodologia hibrida que combine las prácticas utilizados de XP, junto con la metodologia Kanban 
+
+la cual utiliza un tablero visual para **gestionar el flujo de trabajo** y **limitar el trabajo en curso**. 
+
+Esto permite visualizar claramente el estado de cada tarea y detectar cuellos de botella, mejorando la eficiencia y la productividad.
  -->
 
 ---
@@ -425,7 +448,7 @@ a. ¿Existe un diseño o prototipo para integrar esta retroalimentación en un c
 b. De no existir tal plan, ¿qué estrategia sugeriría para convertir estos reportes en acciones concretas que incrementen la precisión del sistema?
 
 <!-- 
-A: El plan consiste en recopilar los reportes de retroalimentación y utilizarlos en el futuro para aplicar técnicas de fine-tuning supervisado con datos etiquetados, alineando así el modelo a partir de ejemplos reales y mejorando su precisión en tareas específicas.
+El plan consiste en recopilar los reportes de retroalimentación y utilizarlos en el futuro para aplicar técnicas de fine-tuning supervisado con datos etiquetados, alineando así el modelo a partir de ejemplos reales y mejorando su precisión en tareas específicas.
 -->
 
 ---
@@ -513,3 +536,24 @@ La fase que demandó más tiempo del estimado fue el diseño de las evaluaciones
 
 Para futuras réplicas, ajustaría la distribución del tiempo destinando más recursos y planificación temprana a la fase de diseño y generación de evaluaciones, considerando la complejidad de cubrir múltiples dominios. Además, integraría desde el inicio herramientas automatizadas similares para acelerar este proceso y evitar retrasos en etapas posteriores del proyecto.
 -->
+
+---
+
+# Respuesta
+
+| Area | Temas |
+| --- | --- |
+| Matemáticas | Números Primos, Algebra lineal, Calculo, Probabilidad | 
+| Ciencias de la Computación | Algoritmo, Estructura de datos, Inteligencia artificial, Programación de computadoras | 
+| Biología | Célula (biología), Genética, Evolución, Ecología | 
+| Física | Mecánica clásica, Electromagnetismo, Mecánica cuántica, Termodinámica | 
+| General | Batman, Perro salchicha, Teoría conspirativa, Religión |
+
+<!-- 
+- Incluye un total de 80 pares pregunta respuesta (4 pares por cada tema).
+
+- Las preguntas fueron generadas de forma automática (usando un LLM), y están orientadas
+a distintos dominios (ver Tabla 28).
+
+- El dataset fue conformado de diferentes artículos de Wikipedia en versión inglés y español
+ -->
