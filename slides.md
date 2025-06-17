@@ -379,9 +379,7 @@ Las prácticas adoptadas que permitieron iterar rápidamente y mejorar el códig
 
 - ✅ Diseño simple
 
-- ✅ Pruebas
-
-- ✅ Refactorización
+- ✅ Refactorización constante
 
 Las prácticas que se omitieron fueron:
 
@@ -434,13 +432,34 @@ A: El plan consiste en recopilar los reportes de retroalimentación y utilizarlo
 
 # PREGUNTAS DEL OPONENTE
 
-a. ¿Se realizaron pruebas con usuarios reales (ej.: académicos o científicos locales) para evaluar aspectos cualitativos como usabilidad, claridad de las respuestas o integración en sus flujos de trabajo?
+a. En futuras iteraciones del sistema, si el objetivo fuera su adopción por usuarios reales (investigadores, académicos), ¿qué métricas cualitativas y procesos de retroalimentación recomendaría incorporar para evaluar su usabilidad, adaptación al contexto local e impacto en flujos de trabajo?
 
-b. En caso negativo, ¿qué métricas subjetivas (ej.: encuestas de satisfacción, tiempo promedio para editar respuestas generadas) recomendaría incorporar en futuras iteraciones para asegurar que el sistema cumpla con las expectativas de su público objetivo?
+---
+layout: image 
+image: ./assets/feedback.webp
+---
+
+# Respuesta
 
 <!-- 
+Para futuras iteraciones, recomendaría incorporar varias métricas subjetivas y mecanismos de retroalimentación directa para asegurar que el sistema cumpla con las expectativas del público objetivo:
 
+- Sistema de feedback integrado: Similar al utilizado en plataformas como ChatGPT, donde los usuarios pueden calificar la utilidad o claridad de cada respuesta y dejar comentarios específicos.
 -->
+
+---
+layout: image 
+image: ./assets/human-in-the-loop.webp
+---
+
+# Respuesta 
+
+<!-- 
+- Sistema Human-in-the-Loop (HITL): Integrar un proceso donde usuarios expertos puedan revisar, corregir y validar las respuestas generadas por el sistema. Esto no solo mejora la calidad final, sino que también proporciona datos valiosos para ajustar el modelo y priorizar correcciones futuras
+
+
+- Encuestas de aceptación y satisfacción: Aplicar cuestionarios periódicos para medir la satisfacción general, facilidad de uso, relevancia de las respuestas y posibles áreas de mejora. 
+ -->
 
 ---
 
@@ -450,7 +469,7 @@ a. Además de los desafíos técnicos documentados, ¿qué problema no previsto 
 
 ---
 layout: image 
-image: ./assets/development.png
+image: ./assets/development.webp
 ---
 
 # Respuesta
@@ -461,14 +480,13 @@ El principal desafío no previsto fue la lentitud en el ciclo de iteración dura
 
 ---
 layout: image 
-image: ./assets/logs.png
+image: ./assets/logs.webp
 ---
 
 # Respuesta
 
 <!-- 
-La solución implementada incluyó dos estrategias clave:
-- Sistema de logging jerárquico que registraba:
+La solución implementada incluyó la implementacion de un sistema de logging que registra:
   - Estados internos del sistema en cada etapa de procesamiento
   - Entradas/salidas de cada módulo con marcas temporales
   - Errores de inferencia con snapshots de datos contextuales
