@@ -76,7 +76,7 @@ Estas limitaciones generan una brecha tecnológica que limita la capacidad de lo
 
 # Problema de investigación
 
-¿Cómo desarrollar una herramienta de IA accesible, eficiente y localizable que permita a investigadores cubanos analizar documentos científicos de forma semi-automatizada, aprovechando los modelos de lenguaje de gran tamaño y generación aumentada por recuperación (RAG), sin depender de infraestructura costosa o conexión a internet?
+¿Cómo desarrollar una herramienta de IA accesible, efectiva y localizable que permita a investigadores cubanos analizar documentos científicos de forma semi-automatizada, aprovechando los modelos de lenguaje de gran tamaño y generación aumentada por recuperación (RAG), sin depender de infraestructura costosa o conexión a internet?
 
 <!--
 A partir de esta problematica surge como problema de investigación:
@@ -107,7 +107,7 @@ Desarrollar una herramienta de código abierto, basada en LLM y RAG, para el an�
 
 # Tareas de investigación
 
-+ Elaboración del marco teórico referente a modelos del lenguaje de gran tamaño y la extension utilizando generación aumentada por recuperación.
++ Elaboración del marco teórico referente a modelos del lenguaje de gran tamaño y su extension utilizando generación aumentada por recuperación.
 + Análisis de sistemas homólogos para la identificación de los requisitos de software.
 + Implementación del sistema a partir de los requisitos de software.
 + Validación de la propuesta de solución.
@@ -135,27 +135,25 @@ Generacion Aumentada por Recuperacion (RAG) es una técnica que combina lo mejor
 
 | **Característica** | **LLM** | **LLM + RAG** |
 |-----------|-----------|-----------|
-| **Acceso a la información** | Conocimiento estático. | Acceso a información actualizada y en tiempo real. |
-| **Verificación de respuestas**| Respuestas no verificables | Control y filtrado de la información con citas verificables  |
-| **Manejo del contexto** | Pérdida o limitación del contexto. | Enfoque en fragmentos relevantes para cada consulta. |
+| **Acceso a la información** | ❌ Conocimiento estático. | ✅ Acceso a información actualizada y en tiempo real. |
+| **Verificación de respuestas**| ❌ Respuestas no verificables | ✅ Control y filtrado de la información  |
+| **Manejo del contexto** | ❌ Pérdida o limitación del contexto. | ✅ Enfoque en fragmentos relevantes para cada consulta. |
 
 <!--
-Esto resuelve tres problemas clave de los LLMs tradicionales:
+Esto resuelve tres limitaciones clave de los LLM tradicionales:
 
-- Con los LLM el conocimiento esta limitado a los datos con los que fue entrenado \
-- RAG permite integrar información nueva y en tiempo real.
-
-- ... \
+- Con los LLM el conocimiento es estático, limitado a los datos con los que fue entrenado.
+- El enfoque RAG permite ...
+- ... 
 - con RAG se tiene un mayor control y filtrado sobre la información que se utiliza para generar la respuesta.
 
-- los LLM a menudo tienen un pobre rendimiento cuando la entrada es demasiado grande. \
-- RAG permite utilizar solo la informacion relevante para responder la pregunta. 
+- los LLM a menudo tienen un pobre rendimiento cuando el texto de entrada es demasiado grande.
+- RAG permite utilizar solo la información relevante para responder la pregunta. 
 
 En el prototipo desarrollado, este enfoque permite al usuario: 
 
 Integrar conocimiento nuevo proveniente de documentos externos al sistema.
 -->
-
 
 ---
 layout: two-cols
@@ -163,7 +161,7 @@ layout: two-cols
 
 <template v-slot:default>
 
-<SlidevVideo autoplay class="h-[500px]">
+<SlidevVideo autoplay muted loop class="h-[500px]">
   <source src="./assets/video-send-pdf.mp4" type="video/mp4" />
 </SlidevVideo>
 
@@ -178,11 +176,12 @@ layout: two-cols
 <!--
 El prototipo realizado consiste del siguiente flujo:
 
-El usuario puede iniciar una conversacion e introducir documentos en formato `.pdf`
-El sistema los procesara:
-    - dividiento el contenido en secciones de texto.
-    - estas son transformados del lenguaje natural a una representacion numerica (forma de vectores) que mantiene el significado semantico de esta.
-    - estos vectores son guardados en una base de datos.
+1. El usuario puede iniciar una conversación e introducir documentos en formato PDF:
+
+2. El sistema los procesara, dividiendo el contenido en secciones de texto.
+    - estas son transformados del lenguaje natural a una representación numérica (forma de vectores) que mantiene el significado semántico de estas.
+
+3. estos vectores son guardados en una base de datos.
 -->
 
 ---
@@ -191,7 +190,7 @@ layout: two-cols
 
 <template v-slot:default>
 
-<SlidevVideo autoplay class="h-[450px] absolute top-15 left-2">
+<SlidevVideo autoplay muted loop class="h-[450px] absolute top-15 left-2">
   <source src="./assets/video-query.mp4" type="video/mp4"  />
 </SlidevVideo>
 
@@ -202,14 +201,15 @@ layout: two-cols
 <img src="./assets/step-querying.webp" />
 
 </template>
+
 <!--
 Posteriormente, al usuario introducir una consulta
-El sistema:
-    - convierte esta a la misma representacion numerica (utilizando un modelo especializado).
-    - luego realiza una busqueda utilizando multiples metodos de recuperacion
-        para obtener los documentos mas relevantes a la consulta.
-    - los mismos son reordenados basados en la relevancia.
-    - luego estos sirven de contexto para responder la consulta utilizando el LLM.
+
+1. El sistema puede descomponer la misma en múltiples sub-preguntas.
+2. Luego son convertidas a la misma representación numérica (utilizando un modelo especializado).
+3. Posteriormente se realiza una búsqueda utilizando múltiples métodos de recuperación para obtener los documentos mas relevantes a la consulta.
+4. los mismos son reordenados basados en la relevancia.
+5. luego estos sirven de contexto para responder la pregunta utilizando el LLM.
 -->
 
 ---
@@ -267,11 +267,13 @@ image: "./assets/performance.webp"
 ## Resultados y evaluación
 
 <!--
+En cuanto a los resultados obtenidos:
+
 - Las pruebas de rendimiento fueron satisfactorias, arrojando resultados alentadores.
 
-  - Con tiempos que no superan los 3.5 seg en las pruebas realizadas a la generacion de respuestas.
+  - Con tiempos que no superan los 3.5 seg en las pruebas realizadas a la generación de respuestas.
 
-  - 2 seg a la creacion de embeddings
+  - y los 2 seg a la creación de embeddings
 -->
 
 ---
@@ -282,42 +284,13 @@ image: ./assets/ragas.webp
 ## Resultados y evaluación
 
 <!--
-Las evaluaciones realizadas validaron que el prototipo cumple con los objetivos planteados:
+Para las evaluaciones se utilizaron las metricas definidas por RAGAS las cuales son:
 
-- Proporciona respuestas precisas y contextualizadas, que situan al prototipo como una base robusta para ser extendida en el futuro.
-- Y ofrecen datos valiosos que permiten enfocar futuras mejoras.
+Los resultados obtenidos fueron **LEER**, valores que se alinean con lo esperado. 
 
-A continuacion se muestran los resultados de utilizar las metricas definidas por RAGAS para evaluar el sistema:
+El rendimiento en Faithfulness y Factual Correctness está condicionado por el tamaño reducido del modelo LLM utilizado. 
 
-- Faithfulness: respuesta generada vs informacion recuperada.
-    -> La respuesta generada no se adiere en la mayoria de los casos a la informacion recuperada.
-    -> Lo cual puede deberse al modelo LLM utilizado.
-
-- Context Recall: porciento de informacion relevante recuperada / toda la informacion recuperada.
-    -> El prototipo en la mayoria de los casos probados recupera la informacion relevante.
-
-- Factual Correctness: respuesta generada vs la de referencia.
-    -> La respuesta representa la mayoria de los hechos en la respuesta de referencia.
-
-Los resultados obtenidos fueron los esperados y marcan el camino para enfocar futuras mejoras.
-
-
-Esto nos da a entender que si bien los documentos relevantes se encuentran en su mayoria, hay presencia de mucho ruido lo cual lleva a que el modelo ignore la mayoria de esta.
--->
-
-
----
-layout: image
-image: ./assets/unit-test-results.webp
----
-
-## Pruebas de Unidad
-
-<!--
-Las pruebas de unidad se encargan de validar el comportamiento correcto de
-componentes individuales de forma aislada.
-
-Estos fueron los resultados en las 2 iteraciones del desarrollo.
+Dado que la investigación se enfoca en el uso de LLM y RAG en entornos con recursos limitados, estos resultados reflejan un balance adecuado entre precisión y eficiencia, proporcionando una base sólida para futuras mejoras.
 -->
 
 ---
@@ -327,6 +300,16 @@ image: ./assets/rag.webp
 
 <!-- 
 En pantalla se puede ver la aplicacion 
+
+En pantalla se puede ver el prototipo generado. 
+
+A la izquierda, se encuentran los ajustes avanzados
+  - como opciones de configuración del modelo
+  - opciones de indexado avanzado, etc
+
+En el centro, se muestra el área de conversación donde el usuario realiza consultas. 
+
+A la derecha, se visualizan los documentos o fragmentos relevantes recuperados, junto a sus identificadores, lo que permite entender cómo el modelo selecciona la información utilizada para generar la respuesta.
  -->
 
 ---
@@ -355,38 +338,6 @@ Con el desarrollo de la herramienta se puede afirmar que:
 
 - Investigar la incorporación de grafos de conocimiento (**GraphRAG**) para aumentar la precisión y contextualización.
 
-
----
-layout: section
----
-
-# Preguntas ...
-
-<!-- 
-Experiencia con metodología XP en un proyecto individual
-Q: ¿Qué prácticas de XP resultaron más desafiantes o menos aplicables en un contexto unipersonal?
-A: Programacion por duos
-
-Q: La HU_8 permite calificar respuestas (ej.: "alucinación", "inapropiado"), pero no se detalla cómo estos datos se utilizarían para mejorar el sistema. ¿Planea implementar un ciclo de refinamiento basado en esta retroalimentación?
-A: alineacion del modelo mediante fine-tuning
-
-Q: ¿Consideró métricas de satisfacción de usuario más allá de las técnicas (RAGAS)?
-
-
-Desafíos inesperados durante el desarrollo
-Q: Más allá de las limitaciones técnicas previstas (baja conectividad, hardware), ¿qué obstáculo no anticipado surgió durante la implementación y cómo lo resolvió?
-A: Debugabilidad y Logs 
-
-Q: Si tuviera que repetir el proyecto, ¿qué fase acortaría o ampliaría en el plan de iteraciones?
-A: ampliaria la fase de pruebas
--->
-
----
-layout: image
-image: ./assets/eval-tool.webp
----
-
-
 ---
 
 <div class="flex flex-col justify-between h-[470px]">
@@ -409,3 +360,138 @@ image: ./assets/eval-tool.webp
     </span>
   </div>
 </div>
+
+
+---
+
+# PREGUNTAS DEL OPONENTE
+
+a. ¿Qué prácticas de XP (ej: pair programming, TDD) adaptó u omitió en este contexto unipersonal, y cómo afectó esto la calidad o eficiencia del proceso?
+
+
+---
+
+# Respuesta
+
+Las prácticas adoptadas que permitieron iterar rápidamente y mejorar el código de forma continua:
+
+<v-clicks>
+
+- ✅ Diseño simple
+
+- ✅ Pruebas
+
+- ✅ Refactorización
+
+Las prácticas que se omitieron fueron:
+
+- ❌ Propiedad colectiva del código
+
+- ❌ Programación en parejas
+
+</v-clicks>
+
+<!-- 
+- Mantener el diseño del sistema lo más simple posible, implementando solo lo necesario para cumplir los requisitos actuales.
+
+- Se desarrollaron pruebas para garantizar que software cumple con los requisitos y que los cambios no introducen errores.
+
+- Se realizo refactorizacion constante para mejorar continuamente el código sin cambiar su funcionalidad, para mantenerlo limpio y fácil de entender.
+
+Se omitieron las prácticas como **LEER**, lo que hizo que la **detección de errores fuera más lenta**, ya que no contaba con una revisión inmediata de otro desarrollador. 
+-->
+
+---
+
+# PREGUNTAS DEL OPONENTE
+
+b. Para proyectos futuros de similar escala individual, ¿recomendaría XP u optaría por otra metodología ágil (ej: Scrum simplificado)? Justifique.
+
+---
+layout: image
+image: ./assets/kanban.webp
+---
+
+# Respuesta
+
+<!-- 
+Para futuros proyectos individuales, recomendaria una metodologia hibrida que combine las practicas utilizados en este desarrollo anteriormente mencionados de XP, junto con la metodologia Kanban la cual utiliza un tablero visual para **gestionar el flujo de trabajo** y **limitar el trabajo en curso**. Esto permite visualizar claramente el estado de cada tarea y detectar cuellos de botella, mejorando la eficiencia y la productividad.
+ -->
+
+---
+
+# PREGUNTAS DEL OPONENTE
+
+a. ¿Existe un diseño o prototipo para integrar esta retroalimentación en un ciclo de refinamiento automático (ej: fine-tuning con datos etiquetados) o manual (ej: priorización de correcciones)?
+
+b. De no existir tal plan, ¿qué estrategia sugeriría para convertir estos reportes en acciones concretas que incrementen la precisión del sistema?
+
+<!-- 
+A: El plan consiste en recopilar los reportes de retroalimentación y utilizarlos en el futuro para aplicar técnicas de fine-tuning supervisado con datos etiquetados, alineando así el modelo a partir de ejemplos reales y mejorando su precisión en tareas específicas.
+-->
+
+---
+
+# PREGUNTAS DEL OPONENTE
+
+a. ¿Se realizaron pruebas con usuarios reales (ej.: académicos o científicos locales) para evaluar aspectos cualitativos como usabilidad, claridad de las respuestas o integración en sus flujos de trabajo?
+
+b. En caso negativo, ¿qué métricas subjetivas (ej.: encuestas de satisfacción, tiempo promedio para editar respuestas generadas) recomendaría incorporar en futuras iteraciones para asegurar que el sistema cumpla con las expectativas de su público objetivo?
+
+<!-- 
+
+-->
+
+---
+
+# PREGUNTAS DEL OPONENTE
+
+a. Además de los desafíos técnicos documentados, ¿qué problema no previsto (ej.: incompatibilidad de bibliotecas, calidad de datos de prueba) surgió durante la codificación o pruebas, y cómo se resolvió?
+
+---
+layout: image 
+image: ./assets/development.png
+---
+
+# Respuesta
+
+<!-- 
+El principal desafío no previsto fue la lentitud en el ciclo de iteración durante el desarrollo, causada por la necesidad de reiniciar la aplicación tras cada cambio para recargar modelos pesados en memoria (entre 10-20 minutos por reinicio). Esto limitaba la capacidad de depuración rápida y testeos incrementales, especialmente al integrar componentes interdependientes.
+-->
+
+---
+layout: image 
+image: ./assets/logs.png
+---
+
+# Respuesta
+
+<!-- 
+La solución implementada incluyó dos estrategias clave:
+- Sistema de logging jerárquico que registraba:
+  - Estados internos del sistema en cada etapa de procesamiento
+  - Entradas/salidas de cada módulo con marcas temporales
+  - Errores de inferencia con snapshots de datos contextuales
+
+Este enfoque se alinea con prácticas recomendadas en debugging de ML, donde la visibilidad del estado interno y la modularidad son críticas para sistemas complejos. Sin embargo, la solución requirió ajustar el balance entre precisión (modelos completos) y velocidad de desarrollo.  
+-->
+
+---
+
+# PREGUNTAS DEL OPONENTE
+
+b. Tras la experiencia adquirida, ¿qué fase del plan original (ej.: diseño de arquitectura, pruebas RAGAS) demandó más/menos tiempo del estimado, y cómo ajustaría su distribución en futuras réplicas?
+
+
+---
+layout: image
+image: ./assets/eval-tool.webp
+---
+
+# Respuesta
+
+<!-- 
+La fase que demandó más tiempo del estimado fue el diseño de las evaluaciones, ya que se requería una forma que permitiera crear pruebas en múltiples áreas del conocimiento para evaluar el sistema de manera general. Para abordar este desafío, se desarrolló una herramienta externa e independiente que, utilizando artículos de Wikipedia, generó automáticamente conjuntos de datos de prueba. Esta solución automatizada facilitó la creación de evaluaciones diversas y representativas.
+
+Para futuras réplicas, ajustaría la distribución del tiempo destinando más recursos y planificación temprana a la fase de diseño y generación de evaluaciones, considerando la complejidad de cubrir múltiples dominios. Además, integraría desde el inicio herramientas automatizadas similares para acelerar este proceso y evitar retrasos en etapas posteriores del proyecto.
+-->
