@@ -33,9 +33,13 @@ fonts:
 </div>
 
 <!--
-Buenos días, mi nombre es Joaquín Rivas Sánchez y hoy presentaré mi tesis titulada:
+Buenos días, en el dia de hoy se le dara presentacion al trabajo de diploma titulado:
 
-**LEER**
+**LEER TITULO**
+
+El autor es quien les habla y los tutores.
+
+**LEER TUTORES**
 -->
 
 ---
@@ -44,12 +48,11 @@ image: "./assets/ai.webp"
 ---
 
 <!--
-"En los últimos anos, la IA generativa ha revolucionado la investigación científica.
-Herramientas como ChatGPT, Elicit o Semantic Scholar permiten analizar miles de artículos en segundos, acelerando descubrimientos en medicina, ingeniería y otros campos.
+En los últimos años, la inteligencia artificial generativa ha transformado profundamente diversas areas del saber como la investigación científica y académica.
 
--TODO: Según Nature, el 83% de los investigadores usan ya IA para revisiones bibliográficas...
+Herramientas como Elicit o SciSpace **permiten analizar y sintetizar miles de artículos en minutos**, **acelerando descubrimientos** y **facilitando tareas** que antes resultaban inabordables por su volumen o complejidad.
 
-Sin embargo, estas herramientas presentan limitaciones prácticas para entornos con recursos limitados como el cubano.
+Sin embargo, el acceso a estas herramientas presentan limitaciones significativas en entornos con recursos restringidos, como el cubano.
 -->
 
 ---
@@ -57,11 +60,13 @@ layout: image
 image: ./assets/homologos.webp
 ---
 
-# Sistemas Homologos
+# Sistemas Homólogos
 
 <!--
-- Muchos servicios están bloqueados para usuarios en Cuba.
-- Las opciones gratuitas son muy limitadas y el acceso a planes de pagos es inviable por restricciones económicas y politicas.
+- Muchos servicios se encuentran bloqueados para usuarios en Cuba.
+
+- Las opciones gratuitas son muy limitadas y el acceso a planes de pagos es inviable por restricciones económicas y políticas.
+
 - Además, la mayoría de estas herramientas están enfocadas para un público angloparlante, lo que reduce su accesibilidad local.
 
 Estas limitaciones generan una brecha tecnológica que limita la capacidad de los investigadores cubanos para competir en igualdad de condiciones en la ciencia global.
@@ -74,7 +79,7 @@ Estas limitaciones generan una brecha tecnológica que limita la capacidad de lo
 ¿Cómo desarrollar una herramienta de IA accesible, eficiente y localizable que permita a investigadores cubanos analizar documentos científicos de forma semi-automatizada, aprovechando los modelos de lenguaje de gran tamaño y generación aumentada por recuperación (RAG), sin depender de infraestructura costosa o conexión a internet?
 
 <!--
-Esto nos lleva al siguiente problema de investigación
+A partir de esta problematica surge como problema de investigación:
 
 **LEER**
 -->
@@ -112,44 +117,43 @@ Para dar cumplimiento al objetivo propuesto se proponen un conjunto de *tareas d
 -->
 
 ---
-layout: image
-image: "./assets/chatgpt.webp"
----
 
-## ¿Qué es RAG y por qué es importante?
-
-<br>
-
-<v-clicks>
-
-<a>Limitaciones de los LLM</a> \
-✖ **Conocimiento congelado**
-
-✖ **Respuestas no verificables**
-
-✖ **Pérdida de contexto**
-
-</v-clicks>
+# ¿Qué es RAG y por qué es importante?
 
 <!--
-RAG (Retrieval-Augmented Generation) es una técnica que combina lo mejor de dos mundos:
-1️⃣ La capacidad generativa de los LLMs para entender y sintetizar información.
-2️⃣ Un sistema de recuperación que busca datos actualizados y relevantes en tiempo real.
+Primero es importante entender que es RAG:
 
+Generacion Aumentada por Recuperacion (RAG) es una técnica que combina lo mejor de dos mundos:
+
+1. La habilidad de buscar y recuperar información específica y actualizada de fuentes externas, como bases de datos, documentos o repositorios de datos.
+2. La capacidad generativa de los LLM para sintetizar información.
+-->
+
+---
+
+# Limitaciones de los LLM
+
+| **Característica** | **LLM** | **LLM + RAG** |
+|-----------|-----------|-----------|
+| **Acceso a la información** | Conocimiento estático. | Acceso a información actualizada y en tiempo real. |
+| **Verificación de respuestas**| Respuestas no verificables | Control y filtrado de la información con citas verificables  |
+| **Manejo del contexto** | Pérdida o limitación del contexto. | Enfoque en fragmentos relevantes para cada consulta. |
+
+<!--
 Esto resuelve tres problemas clave de los LLMs tradicionales:
 
-✖ **Conocimiento congelado**: Los modelos base solo saben lo que aprendieron en su entrenamiento.
-✔ **Con RAG**: Siempre accede a la información más reciente.
+- Con los LLM el conocimiento esta limitado a los datos con los que fue entrenado \
+- RAG permite integrar información nueva y en tiempo real.
 
-✖ **Respuestas no verificables**: Como 'cajas negras' que no muestran sus fuentes.
-✔ **Con RAG**: Mayor control de la informacion y posibilidad de filtrala y citarla.
+- ... \
+- con RAG se tiene un mayor control y filtrado sobre la información que se utiliza para generar la respuesta.
 
-✖ **Pérdida de contexto**: Los LLMs comunes olvidan detalles cuando procesan mucho texto.
-✔ **Con RAG**: Mejora la consistencia en el análisis de múltiples documentos al enfocarse en los fragmentos más relevantes para cada consulta.
+- los LLM a menudo tienen un pobre rendimiento cuando la entrada es demasiado grande. \
+- RAG permite utilizar solo la informacion relevante para responder la pregunta. 
 
+En el prototipo desarrollado, este enfoque permite al usuario: 
 
-
-En nuestra herramienta, este enfoque permite al usuario: Integrar conocimiento nuevo proveniente de documentos externos al sistema.
+Integrar conocimiento nuevo proveniente de documentos externos al sistema.
 -->
 
 
@@ -159,10 +163,8 @@ layout: two-cols
 
 <template v-slot:default>
 
-## Propuesta de solución
-
-<SlidevVideo autoplay>
-  <source src="./assets/video-send-pdf.mp4" type="video/mp4"  />
+<SlidevVideo autoplay class="h-[500px]">
+  <source src="./assets/video-send-pdf.mp4" type="video/mp4" />
 </SlidevVideo>
 
 </template>
@@ -176,12 +178,11 @@ layout: two-cols
 <!--
 El prototipo realizado consiste del siguiente flujo:
 
-El usuario puede iniciar una conversacion e introducir un documento en formato pdf
-El sistema procesara este
-    - dividiento el contenido en parrafos.
-    - estos son transformados del lenguaje natural a una representacion numerica que
-        mantiene el significado semantico de este.
-    - estos son guardados en una base de datos.
+El usuario puede iniciar una conversacion e introducir documentos en formato `.pdf`
+El sistema los procesara:
+    - dividiento el contenido en secciones de texto.
+    - estas son transformados del lenguaje natural a una representacion numerica (forma de vectores) que mantiene el significado semantico de esta.
+    - estos vectores son guardados en una base de datos.
 -->
 
 ---
@@ -190,9 +191,7 @@ layout: two-cols
 
 <template v-slot:default>
 
-## Propuesta de solución
-
-<SlidevVideo autoplay class="h-full">
+<SlidevVideo autoplay class="h-[450px] absolute top-15 left-2">
   <source src="./assets/video-query.mp4" type="video/mp4"  />
 </SlidevVideo>
 
@@ -204,12 +203,12 @@ layout: two-cols
 
 </template>
 <!--
-Posteriormente, el usuario al introducir una consulta
+Posteriormente, al usuario introducir una consulta
 El sistema:
-    - convierte esta a la misma representacion numerica.
-    - realiza una busqueda utilizando multiples metodos de recuperacion
+    - convierte esta a la misma representacion numerica (utilizando un modelo especializado).
+    - luego realiza una busqueda utilizando multiples metodos de recuperacion
         para obtener los documentos mas relevantes a la consulta.
-    - los documentos son reordenados basados en la relevancia.
+    - los mismos son reordenados basados en la relevancia.
     - luego estos sirven de contexto para responder la consulta utilizando el LLM.
 -->
 
@@ -220,16 +219,19 @@ image: "./assets/tech.webp"
 # Tecnologías
 
 <!--
-Se utilizo:
-
-- Python como lenguaje de programación.
+Las tecnologias y herramientas utilizadas fueron las siguientes:
 
 - vLLM como biblioteca para ejecutar los modelos de IA.
 
-- Gradio como biblioteca para construir una interfaz grafica simple.
+- Python como lenguaje de programación.
 
-- El modelo LLM `Qwen3-4B` y `BGE-M3` como modelo de generacion de embeddings.
-    `BGM-M3-reranker` como modelo reranker.
+- Se utilizo `Qwen3-4B` como modelo LLM y `BGE-M3`, `BGM-M3-reranker` como modelo de generacion de embeddings y como modelo reranker.
+
+- RAGAS como biblioteca para realizar las evaluaciones automatizadas.
+
+- PyTorch para algunos algoritmos de comparación que requerian el uso de tensores.
+
+- Gradio como biblioteca para construir la interfaz grafica.
 -->
 
 ---
@@ -265,11 +267,11 @@ image: "./assets/performance.webp"
 ## Resultados y evaluación
 
 <!--
-- Funciona con un rendimiento aceptable en hardware modesto.
+- Las pruebas de rendimiento fueron satisfactorias, arrojando resultados alentadores.
 
   - Con tiempos que no superan los 3.5 seg en las pruebas realizadas a la generacion de respuestas.
 
-  - 3 seg a la creacion de embeddings
+  - 2 seg a la creacion de embeddings
 -->
 
 ---
@@ -280,11 +282,10 @@ image: ./assets/ragas.webp
 ## Resultados y evaluación
 
 <!--
-Las pruebas realizadas validaron que el prototipo cumple con los objetivos planteados:
+Las evaluaciones realizadas validaron que el prototipo cumple con los objetivos planteados:
 
 - Proporciona respuestas precisas y contextualizadas, que situan al prototipo como una base robusta para ser extendida en el futuro.
-
-
+- Y ofrecen datos valiosos que permiten enfocar futuras mejoras.
 
 A continuacion se muestran los resultados de utilizar las metricas definidas por RAGAS para evaluar el sistema:
 
@@ -320,18 +321,27 @@ Estos fueron los resultados en las 2 iteraciones del desarrollo.
 -->
 
 ---
+layout: image
+image: ./assets/rag.webp
+---
+
+<!-- 
+En pantalla se puede ver la aplicacion 
+ -->
+
+---
 
 # Conclusiones
 
-Con el desarrollo de la herramienta se puede afirmar que:
-
-- Se logró una revisión integral de los Modelos de Lenguaje de Gran Tamaño (LLM) y su extensión mediante Generación Aumentada por Recuperación (RAG), lo cual permitió sustentar conceptualmente el diseño de la herramienta propuesta.
-
-- En el análisis de sistemas homólogos, se identificaron limitaciones clave de soluciones existentes, lo que orientó de forma efectiva la definición de los requisitos funcionales y no funcionales del sistema.
+- Se logró una revisión integral de los LLM y su extensión mediante RAG, lo cual permitió sustentar conceptualmente el diseño de la herramienta propuesta.
 
 - La metodología XP facilitó el desarrollo incremental, resultando en un prototipo funcional acorde al objetivo general planteado.
 
 - El prototipo demostró viabilidad en hardware modesto, proporcionando una base sólida para futuras mejoras en generación y actualización documental continua.
+
+<!-- 
+Con el desarrollo de la herramienta se puede afirmar que:
+-->
 
 ---
 
@@ -350,13 +360,32 @@ Con el desarrollo de la herramienta se puede afirmar que:
 layout: section
 ---
 
-# Agradecimientos ...
+# Preguntas ...
 
 <!-- 
-Le agradezco a mis tutores por apoyarme con la conformacion de la tesis y las revisiones de la misma.
+Experiencia con metodología XP en un proyecto individual
+Q: ¿Qué prácticas de XP resultaron más desafiantes o menos aplicables en un contexto unipersonal?
+A: Programacion por duos
 
-A mis padres por siempre apoyarme con todo lo que necesite en el camino.
+Q: La HU_8 permite calificar respuestas (ej.: "alucinación", "inapropiado"), pero no se detalla cómo estos datos se utilizarían para mejorar el sistema. ¿Planea implementar un ciclo de refinamiento basado en esta retroalimentación?
+A: alineacion del modelo mediante fine-tuning
+
+Q: ¿Consideró métricas de satisfacción de usuario más allá de las técnicas (RAGAS)?
+
+
+Desafíos inesperados durante el desarrollo
+Q: Más allá de las limitaciones técnicas previstas (baja conectividad, hardware), ¿qué obstáculo no anticipado surgió durante la implementación y cómo lo resolvió?
+A: Debugabilidad y Logs 
+
+Q: Si tuviera que repetir el proyecto, ¿qué fase acortaría o ampliaría en el plan de iteraciones?
+A: ampliaria la fase de pruebas
 -->
+
+---
+layout: image
+image: ./assets/eval-tool.webp
+---
+
 
 ---
 
