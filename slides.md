@@ -151,9 +151,9 @@ Esto resuelve tres limitaciones clave de los LLM tradicionales:
 
 - Los LLM por sí solos tienen un conocimiento estático, limitado a los datos con los que fueron entrenados, sin acceso a información posterior a ese entrenamiento.
 
-- La ventana de contexto limitada dificulta el manejo de textos largos o complejos, lo que puede afectar la coherencia y precisión de las respuestas.
-
 - La verificación y control de la información generada es limitada, lo que puede provocar respuestas incorrectas o "alucinaciones"
+
+- Tienen un limite de informacion de entrada y a menudo presentan un bajo rendimiento en textos largos o complejos, lo que puede afectar la coherencia y precisión de las respuestas.
 
 
 En el prototipo, **este enfoque permite** al usuario: 
@@ -478,18 +478,20 @@ Para futuras iteraciones, recomendaría incorporar varias métricas subjetivas y
 -->
 
 ---
-layout: image 
+layout: image
 image: ./assets/human-in-the-loop.webp
 ---
 
-# Respuesta 
+# Respuesta
 
-<!-- 
-- Sistema Human-in-the-Loop (HITL): Integrar un proceso donde usuarios expertos puedan revisar, corregir y validar las respuestas generadas por el sistema. Esto no solo mejora la calidad final, sino que también proporciona datos valiosos para ajustar el modelo y priorizar correcciones futuras
+<!--
+- Sistema Human-in-the-Loop (HITL): Integrar un proceso donde usuarios expertos puedan revisar, corregir y validar las respuestas generadas por el sistema. 
+
+Esto no solo mejora la calidad final, sino que también proporciona datos valiosos para ajustar el modelo y priorizar correcciones futuras
 
 
-- Encuestas de aceptación y satisfacción: Aplicar cuestionarios periódicos para medir la satisfacción general, facilidad de uso, relevancia de las respuestas y posibles áreas de mejora. 
- -->
+- Encuestas de aceptación y satisfacción: Aplicar cuestionarios periódicos para medir la satisfacción general, facilidad de uso, relevancia de las respuestas y posibles áreas de mejora.
+-->
 
 ---
 
@@ -509,19 +511,18 @@ El principal desafío no previsto fue la lentitud en el ciclo de iteración dura
 -->
 
 ---
-layout: image 
+layout: image
 image: ./assets/logs.webp
 ---
 
 # Respuesta
 
-<!-- 
+<!--
 La solución implementada incluyó la implementacion de un sistema de logging que registra:
   - Estados internos del sistema en cada etapa de procesamiento
   - Entradas/salidas de cada módulo con marcas temporales
-  - Errores de inferencia con snapshots de datos contextuales
 
-Este enfoque se alinea con prácticas recomendadas en debugging de ML, donde la visibilidad del estado interno y la modularidad son críticas para sistemas complejos. Sin embargo, la solución requirió ajustar el balance entre precisión (modelos completos) y velocidad de desarrollo.  
+Este enfoque se alinea con prácticas recomendadas en debugging de ML, donde la visibilidad del estado interno y la modularidad son críticas para sistemas complejos. Sin embargo, la solución requirió ajustar el balance entre precisión (modelos completos) y velocidad de desarrollo.
 -->
 
 ---
@@ -538,8 +539,10 @@ image: ./assets/eval-tool.webp
 
 # Respuesta
 
-<!-- 
-La fase que demandó más tiempo del estimado fue el diseño de las evaluaciones, ya que se requería una forma que permitiera crear pruebas en múltiples áreas del conocimiento para evaluar el sistema de manera general. Para abordar este desafío, se desarrolló una herramienta externa e independiente que, utilizando artículos de Wikipedia, generó automáticamente conjuntos de datos de prueba. Esta solución automatizada facilitó la creación de evaluaciones diversas y representativas.
+<!--
+La fase que demandó más tiempo del estimado fue el diseño de las evaluaciones, ya que se requería una forma que permitiera crear pruebas en múltiples áreas del conocimiento para evaluar el sistema de manera general. 
+
+Para abordar este desafío, se desarrolló una herramienta externa e independiente que, que utilizando artículos de Wikipedia, generó automáticamente conjuntos de datos de prueba. Esta solución automatizada facilitó la creación de evaluaciones diversas y representativas.
 
 Para futuras réplicas, ajustaría la distribución del tiempo destinando más recursos y planificación temprana a la fase de diseño y generación de evaluaciones, considerando la complejidad de cubrir múltiples dominios. Además, integraría desde el inicio herramientas automatizadas similares para acelerar este proceso y evitar retrasos en etapas posteriores del proyecto.
 -->
