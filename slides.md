@@ -151,9 +151,9 @@ Esto resuelve tres limitaciones clave de los LLM tradicionales:
 
 - Los LLM por sí solos tienen un conocimiento estático, limitado a los datos con los que fueron entrenados, sin acceso a información posterior a ese entrenamiento.
 
-- La ventana de contexto limitada dificulta el manejo de textos largos o complejos, lo que puede afectar la coherencia y precisión de las respuestas.
-
 - La verificación y control de la información generada es limitada, lo que puede provocar respuestas incorrectas o "alucinaciones"
+
+- Tienen un limite de informacion de entrada y a menudo presentan un bajo rendimiento en textos largos o complejos, lo que puede afectar la coherencia y precisión de las respuestas.
 
 
 En el prototipo, **este enfoque permite** al usuario: 
