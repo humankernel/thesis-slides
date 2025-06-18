@@ -144,7 +144,7 @@ Generación Aumentada por Recuperación (RAG) es una técnica que combina lo mej
 |-----------|-----------|-----------|
 | **Acceso a la información** | ❌ Conocimiento estático. | ✅ Acceso a información actualizada y en tiempo real. |
 | **Verificación de respuestas**| ❌ Respuestas no verificables | ✅ Control y filtrado de la información  |
-| **Manejo del contexto** | ❌ Bajo rendimiento en textos extensos. | ✅ El contexto contiene unicamente los fragmentos relevantes para cada consulta. |
+| **Manejo del contexto** | ❌ Bajo rendimiento en textos extensos. | ✅ El contexto contiene únicamente los fragmentos relevantes para cada consulta. |
 
 <!--
 Esto resuelve tres limitaciones clave de los LLM tradicionales:
@@ -248,7 +248,7 @@ La metodología "Programación Extrema" (XP) generó los siguientes artefactos:
 
 - Historias de Usuario (12).
 
-- Tareas de ingenieria (12).
+- Tareas de ingeniería (12).
 
 - Pruebas Unitarias.
 
@@ -551,12 +551,12 @@ Para futuras réplicas, ajustaría la distribución del tiempo destinando más r
 
 # Respuesta
 
-| Area | Temas |
+| Área | Temas |
 | --- | --- |
-| Matemáticas | Números Primos, Algebra lineal, Calculo, Probabilidad | 
-| Ciencias de la Computación | Algoritmo, Estructura de datos, Inteligencia artificial, Programación de computadoras | 
-| Biología | Célula (biología), Genética, Evolución, Ecología | 
-| Física | Mecánica clásica, Electromagnetismo, Mecánica cuántica, Termodinámica | 
+| Matemáticas | Números Primos, Álgebra lineal, Cálculo, Probabilidad |
+| Ciencias de la Computación | Algoritmo, Estructura de datos, Inteligencia artificial, Programación de computadoras |
+| Biología | Célula (biología), Genética, Evolución, Ecología |
+| Física | Mecánica clásica, Electromagnetismo, Mecánica cuántica, Termodinámica |
 | General | Batman, Perro salchicha, Teoría conspirativa, Religión |
 
 <!-- 
